@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --background: #000; /* GitHub dark bg */
+  --foreground: #E6EDF3; /* Clean white text */
+  --grid-bg:#21262d;
+
+  --card: #161B22; /* Subtle dark cards */
+  --card-foreground: #E6EDF3;
+
+  --popover: #161B22;
+  --popover-foreground: #E6EDF3;
+
+  --primary: #00D4FF; /* Clean cyan */
+  --primary-foreground: #0D1117;
+
+  --secondary: #21262D; /* Subtle secondary */
+  --secondary-foreground: #E6EDF3;
+
+  --muted: #30363D;
+  --muted-foreground: #7D8590;
+
+  --accent: #7C3AED; /* Modern purple */
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #F85149; /* Clean red */
+  --destructive-foreground: #FFFFFF;
+
+  --success: #3FB950; /* Clean green */
+  --warning: #D29922; /* Clean amber */
+
+  --border: #30363D;
+  --input: #21262D;
+  --ring: #00D4FF;
+
+  /* === ACCENT COLORS === */
+  --cyber-blue: #00D4FF;
+  --cyber-purple: #7C3AED;
+  --cyber-green: #3FB950;
+  --cyber-orange: #FF7B00;
+
+  /* === TYPOGRAPHY === */
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-display: 'Inter', sans-serif;
+
+  --font: 'montserrat';
+  --font-mono-custom: 'poppins';
+  
+  /* === SPACING & SIZING === */
+  --radius: 0.5rem;
+  --container-padding: 2rem;
+  --header-height: 4rem;
+  --sidebar-width: 16rem;
+  --sidebar-collapsed-width: 4rem;
+
+  /* === SHADOWS & EFFECTS === */
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+  --shadow-glow-intense: 0 0 30px rgba(124, 58, 237, 0.4);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-elevated: 0 16px 64px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 212, 255, 0.1);
+  
+  /* === TRANSITIONS === */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease-out;
+  --transition-slow: all 0.5s ease-in-out;
+
+  /* === GRADIENTS === */
+  --gradient-primary: linear-gradient(135deg, #00D4FF 0%, #7C3AED 100%);
+  --gradient-card: linear-gradient(135deg, #161B22 0%, rgba(22, 27, 34, 0.8) 100%);
+  --gradient-glow: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  --gradient-beam: linear-gradient(90deg, transparent, #00D4FF, transparent);
+  --gradient-subtle: linear-gradient(135deg, #21262D 0%, #30363D 100%);
+
+  /* === GRID & LAYOUT === */
+  --grid-size: 100px;
+  --grid-color: rgb(0, 212, 255);
+
+  /* === SIDEBAR === */
+  --sidebar-background: #0D1117;
+  --sidebar-foreground: #E6EDF3;
+  --sidebar-primary: #00D4FF;
+  --sidebar-primary-foreground: #0D1117;
+  --sidebar-accent: #21262D;
+  --sidebar-accent-foreground: #E6EDF3;
+  --sidebar-border: #30363D;
+  --sidebar-ring: #00D4FF;
+}
+
+.dark {
+  /* === DARK MODE OVERRIDES === */
+  --background: #000000;
+  --foreground: #FFFFFF;
+
+  --card: #111111;
+  --card-foreground: #FFFFFF;
+
+  --popover: #111111;
+  --popover-foreground: #FFFFFF;
+
+  --primary: #00E5FF;
+  --primary-foreground: #000000;
+
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FFFFFF;
+
+  --muted: #262626;
+  --muted-foreground: #A1A1AA;
+
+  --accent: #8B5CF6;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #262626;
+  --input: #1A1A1A;
+  --ring: #00E5FF;
+
+  --sidebar-background: #000000;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #00E5FF;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1A1A1A;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #262626;
+  --sidebar-ring: #00E5FF;
+}
+
+/* === ANIMATION DURATIONS === */
+:root {
+  --duration-instant: 0.1s;
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --duration-slower: 1s;
+}
+
+/* === BREAKPOINTS (for reference in CSS) === */
+:root {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* === Z-INDEX SCALE === */
+:root {
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* === SUBTLE ANIMATIONS === */
+@keyframes subtle-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* === UTILITY CLASSES === */
+.cyber-glow {
+  box-shadow: var(--shadow-glow);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.cyber-glow:hover {
+  box-shadow: var(--shadow-glow-intense);
+  border-color: var(--primary);
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.subtle-glow {
+  animation: subtle-glow 3s ease-in-out infinite;
+}
