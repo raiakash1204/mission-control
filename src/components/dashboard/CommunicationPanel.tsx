@@ -124,7 +124,7 @@ export const CommunicationPanel: React.FC = () => {
       
       <CardContent className="space-y-4">
         {/* Network Status */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="flex grid-cols-2 gap-3">
           <div className="p-3 rounded-lg bg-muted/20 border border-border/30 text-center">
             <div className="text-xs text-muted-foreground mb-1">ACTIVE LINKS</div>
             <div className="text-xl font-mono text-success">
@@ -174,7 +174,7 @@ export const CommunicationPanel: React.FC = () => {
                     <div className="grid grid-cols-3 gap-2 text-xs mb-2">
                       <div>
                         <div className="text-muted-foreground">Signal</div>
-                        <div className="text-primary font-mono">{station.signalStrength}%</div>
+                        <div className="text-primary font-mono">{station.signalStrength.toFixed(2)}%</div>
                       </div>
                       
                       <div>
@@ -206,7 +206,7 @@ export const CommunicationPanel: React.FC = () => {
                   </>
                 )}
 
-                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                <div className="grid items-center justify-between text-xs text-muted-foreground">
                   <span>Last Contact: {getTimeSinceContact(station.lastContact)}</span>
                   {station.status === 'online' && (
                     <div className="flex items-center gap-1">
